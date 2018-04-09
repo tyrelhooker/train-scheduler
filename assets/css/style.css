@@ -1,0 +1,12 @@
+.jumbotron {
+  background: #cc5500;
+  color: whitesmoke;
+}
+
+th {
+  font-size: 16px;
+}
+
+#trainBox {
+  margin-top: 20px;
+}
