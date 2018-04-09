@@ -90,14 +90,29 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log("MINUTES TILL TRAIN: " + minNextTrain);
 
   // Next Train Arrival Time
-  var nextTrainArrival = moment(currentTime.add(minNextTrain, "minutes")).format("hh:mm");
+  var nextTrainArrival = moment(currentTime.add(minNextTrain, "minutes")).format("hh:mm a");
   // nextTrainArrival = moment(nextTrainArrival).format("hh:mm");
   console.log("ARRIVAL TIME: " + nextTrainArrival);
   
+  var deleteRow = "<button class='btn deleteBtn'>delete train</button>";
+
   // Add each train's data into the table
-  $("#trainTable > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td><td>" + trainFrequency + "</td><td>" + nextTrainArrival + "</td><td>" + minNextTrain + "</td></tr>");
+  $("#trainTable tbody").append("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td><td>" + trainFrequency + "</td><td>" + nextTrainArrival + "</td><td>" + minNextTrain + "</td><td>" + deleteRow + "</td></tr>");
 });
 
+
+$(document).on("click", ".deleteBtn", function(event) {
+  event.preventDefault();
+  var rootRef = database.ref();
+  // rootRef.once("value")
+  //   .then(function(childSnapshot) {
+  //     var key = childSnapshot.val().name
+  //   });
+  var $row = $(this).closest("tr");
+  rootRef.remove();
+  $(this).closest('tr').remove();
+
+});
 // function nextTrain(trainFrequency, trainStartTime) {
 //   // var trainFrequency = $("#trainFrequency-input").val().trim();
 //   // var trainStartTime = $("#firstTrain-input").val().trim();
