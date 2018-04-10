@@ -24,7 +24,7 @@
   <body>
     <div class="container">
       <!-- Jumbotron -->
-      <div class="jumbotron">
+      <div class="jumbotron dtborder">
         <h1 class="text-center">Train Schedule</h1>
         <h3 class="text-center">A log of all trains</h3>
       </div>
@@ -34,13 +34,13 @@
 
           <!-- Current Trains running Box -->
           <div class="card card-primary">
-            <div class="card-header bg-primary">
+            <div class="card-header">
               <h3 class="card-title"><strong>Current Train Schedule</strong></h3>
             </div>
             <div class="card-body">
               <table class="table table-hover" id="trainTable">
                 <thead>
-                  <tr>
+                  <tr id="trainInfo">
                     <th>Train Name</th>
                     <th>Destination</th>
                     <th>Frequency (mins)</th>
@@ -57,7 +57,7 @@
 
           <!-- Add Train Box -->
           <div class="card card-primary" id="trainBox">
-            <div class="card-header bg-primary">
+            <div class="card-header">
               <h3 class="card-title"><strong>Add Train</strong></h3>
             </div>
             <!-- Entry Form -->
@@ -79,7 +79,7 @@
                   <label for="trainFrequency-input">Frequency (min)</label>
                   <input class="form-control" id="trainFrequency-input" type="text">
                 </div>
-                <button class="btn btn-primary" id="addTrainBtn" type="submit">Submit</button>
+                <button class="btn" id="addTrainBtn" type="submit">Submit</button>
               </form>
             </div>
           </div>

@@ -86,7 +86,7 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log("ARRIVAL TIME: " + nextTrainArrival);
   
   // Dynamically creates delete button to remove row info and firebase key
-  var deleteRow = "<button class='btn deleteBtn' attr='" + childKey + "'>delete train</button>";
+  var deleteRow = "<button class='btn deleteBtn' attr='" + childKey + "'>Remove</button>";
 
   // Adds each train's data into the train table using es6 templating
   $("#trainTable tbody").append(

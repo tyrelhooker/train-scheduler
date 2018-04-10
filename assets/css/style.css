@@ -1,6 +1,11 @@
+body {
+  background: steelblue;
+}
 .jumbotron {
-  background: #cc5500;
+  background: #B22222;
   color: whitesmoke;
+  /* border: dotted;
+  border-style: double; */
 }
 
 th {
@@ -13,7 +18,53 @@ th {
 }
 
 .deleteBtn {
-  background: red;
+  background: steelblue;
   color: white;
   font-size: 14px;
+  border: 2px solid #B22222
 }
+
+.dtborder {
+  position:relative;
+  border:5px solid whitesmoke;
+  padding:30px;
+  border-radius: 9px;
+  background: #B22222;
+  color: whitesmoke;
+}
+
+.dtborder:before {
+  content:"";
+  position: absolute;
+  top:5px;
+  bottom:5px;
+  left:5px;
+  right:5px;
+  border:15px dotted whitesmoke;
+  border-radius: 5px;
+}
+
+.dtborder:after {
+  content:"";
+  position: absolute;
+  top:15px;
+  bottom:15px;
+  left:15px;
+  right:15px;
+  border:5px solid whitesmoke;
+  border-radius: 8px;
+}
+
+.card-header {
+  color: whitesmoke;
+  text-align: center;
+  border: solid 5px whitesmoke;
+  background: #B22222;
+}
+
+#addTrainBtn {
+  background: steelblue;
+  color: whitesmoke;
+  border: 2px solid #B22222;
+}
+
