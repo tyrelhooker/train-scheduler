@@ -9,4 +9,11 @@ th {
 
 #trainBox {
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+  font-size: 14px;
 }
